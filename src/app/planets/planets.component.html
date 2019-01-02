@@ -1,10 +1,13 @@
 <h2>Planets</h2>
-
-<ul>
-  <li *ngFor="let planet of planets">
-    <a
-      routerLinkActive="active"
-      routerLink="/planets/{{planet.id}}"
-    >{{planet.name}}</a>
-  </li>
-</ul>
+<div class="ui grid">
+  <div class="eight wide column" *ngFor="let planet of planets">
+    <a routerLink="/planets/{{planet.id}}" class="ui card">
+      <div class="content">
+        <div class="header">{{planet.name}}</div>
+        <div class="meta">
+          <span>Population: {{planet.population}}</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

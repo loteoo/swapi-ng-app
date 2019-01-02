@@ -1,10 +1,19 @@
 <h2>Vehicles</h2>
-
-<ul>
-  <li *ngFor="let vehicle of vehicles">
-    <a
-      routerLinkActive="active"
-      routerLink="/vehicles/{{vehicle.id}}"
-    >{{vehicle.name}}</a>
-  </li>
-</ul>
+<div class="ui grid">
+  <div class="eight wide column" *ngFor="let vehicle of vehicles">
+    <a routerLink="/vehicles/{{vehicle.id}}" class="ui card">
+      <div class="content">
+        <div class="header">{{vehicle.name}}</div>
+        <div class="meta">
+          <span>{{vehicle.vehicle_class}}</span>
+        </div>
+        <div class="description">
+          {{vehicle.model}}
+        </div>
+      </div>
+      <div class="extra content">
+        <div>Built by {{vehicle.manufacturer}}</div>
+      </div>
+    </a>
+  </div>
+</div>

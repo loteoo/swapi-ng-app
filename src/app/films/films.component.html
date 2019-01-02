@@ -1,10 +1,16 @@
 <h2>Films</h2>
-
-<ul>
-  <li *ngFor="let film of films">
-    <a
-      routerLinkActive="active"
-      routerLink="/films/{{film.id}}"
-    >{{film.title}}</a>
-  </li>
-</ul>
+<div class="ui grid">
+  <div class="eight wide column" *ngFor="let film of films">
+    <a routerLink="/films/{{film.id}}" class="ui card">
+      <div class="content">
+        <div class="header">{{film.title}}</div>
+        <div class="meta">
+          <span>{{film.release_date | date:'yyyy'}}, {{film.director}}</span>
+        </div>
+        <div class="description">
+          {{film.opening_crawl}}
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

@@ -1,10 +1,19 @@
 <h2>Starships</h2>
-
-<ul>
-  <li *ngFor="let starship of starships">
-    <a
-      routerLinkActive="active"
-      routerLink="/starships/{{starship.id}}"
-    >{{starship.name}}</a>
-  </li>
-</ul>
+<div class="ui grid">
+  <div class="eight wide column" *ngFor="let starship of starships">
+    <a routerLink="/starships/{{starship.id}}" class="ui card">
+      <div class="content">
+        <div class="header">{{starship.name}}</div>
+        <div class="meta">
+          <span>{{starship.starship_class}}</span>
+        </div>
+        <div class="description">
+          {{starship.model}}
+        </div>
+      </div>
+      <div class="extra content">
+        <div>Built by {{starship.manufacturer}}</div>
+      </div>
+    </a>
+  </div>
+</div>

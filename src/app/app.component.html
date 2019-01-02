@@ -1,20 +1,15 @@
-<header>
-  <div class="ui container">
-    <h1>Swapi app</h1>
-  </div>
-</header>
-<div class="ui container">
+<div class="ui main container">
   <div class="ui two column padded grid">
-    <div class="six wide column">
+    <div class="five wide column">
+      <h1>Swapi app</h1>
       <div class="ui vertical menu">
         <div class="item">
-          <div class="header">App</div>
           <div class="menu">
             <a class="item" routerLink="" routerLinkActive="active">Home</a>
           </div>
         </div>
         <div class="item">
-          <div class="header">SWAPI</div>
+          <div class="header">Universe</div>
           <div class="menu">
             <a class="item" routerLink="/people" routerLinkActive="active">People</a>
             <a class="item" routerLink="/films" routerLinkActive="active">Films</a>
@@ -25,22 +20,29 @@
           </div>
         </div>
         <div class="item">
-          <div class="header">Hosting</div>
+          <div class="header">Random</div>
           <div class="menu">
-            <a class="item">Shared</a>
-            <a class="item">Dedicated</a>
+            <a class="item">Counter</a>
+            <a class="item">To-do list</a>
           </div>
         </div>
         <div class="item">
-          <div class="header">Support</div>
+          <div class="header">About</div>
           <div class="menu">
-            <a class="item">E-mail Support</a>
-            <a class="item">FAQs</a>
+            <a class="item">Source code</a>
+            <a class="item">Author</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="header">Build with</div>
+          <div class="menu">
+            <a class="item">Angular 7</a>
+            <a class="item">Sementic UI</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="ten wide column">
+    <div class="ui eleven wide column">
       <router-outlet></router-outlet>
     </div>
   </div>
