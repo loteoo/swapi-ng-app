@@ -11,8 +11,25 @@ export class DataService {
   getPeople() {
     return this.http.get('https://swapi.co/api/people/')
   }
+
   getFilms() {
     return this.http.get('https://swapi.co/api/films/')
+  }
+
+  getStarships() {
+    return this.http.get('https://swapi.co/api/starships/')
+  }
+
+  getVehicles() {
+    return this.http.get('https://swapi.co/api/vehicles/')
+  }
+
+  getSpecies() {
+    return this.http.get('https://swapi.co/api/species/')
+  }
+
+  getPlanets() {
+    return this.http.get('https://swapi.co/api/planets/')
   }
 
 }

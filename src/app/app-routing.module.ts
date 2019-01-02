@@ -1,11 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PeopleComponent } from './people/people.component';
 import { HomeComponent } from './home/home.component';
+import { PeopleComponent } from './people/people.component';
+import { FilmsComponent } from './films/films.component';
+import { StarshipsComponent } from './starships/starships.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { SpeciesComponent } from './species/species.component';
+import { PlanetsComponent } from './planets/planets.component';
 
 const routes: Routes = [
-  { path: 'people', component: PeopleComponent },
   { path: '', component: HomeComponent },
+  { path: 'people', component: PeopleComponent },
+  { path: 'films', component: FilmsComponent },
+  { path: 'starships', component: StarshipsComponent },
+  { path: 'vehicles', component: VehiclesComponent },
+  { path: 'species', component: SpeciesComponent },
+  { path: 'planets', component: PlanetsComponent }
 ];
 
 @NgModule({
