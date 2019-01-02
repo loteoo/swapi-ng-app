@@ -1,5 +1,10 @@
 <h2>Planets</h2>
 
 <ul>
-  <li *ngFor="let planet of planets">{{planet.name}}</li>
+  <li *ngFor="let planet of planets">
+    <a
+      routerLinkActive="active"
+      routerLink="/planets/{{planet.id}}"
+    >{{planet.name}}</a>
+  </li>
 </ul>

@@ -14,7 +14,7 @@ export class StarshipsComponent implements OnInit {
   
   ngOnInit() {
     this.data.getStarships().subscribe(data => {
-      this.starships = data.results;
+      this.starships = this.data.appendIds(data.results);
     })
   }
 

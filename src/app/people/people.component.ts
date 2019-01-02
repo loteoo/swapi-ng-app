@@ -14,7 +14,7 @@ export class PeopleComponent implements OnInit {
 
   ngOnInit() {
     this.data.getPeople().subscribe(data => {
-      this.people = data.results;
+      this.people = this.data.appendIds(data.results);
     })
   }
 

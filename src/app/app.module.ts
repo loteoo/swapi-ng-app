@@ -14,6 +14,11 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { SpeciesComponent } from './species/species.component';
 import { PlanetsComponent } from './planets/planets.component';
 import { FilmComponent } from './film/film.component';
+import { PersonComponent } from './person/person.component';
+import { PlanetComponent } from './planet/planet.component';
+import { SpecieComponent } from './specie/specie.component';
+import { StarshipComponent } from './starship/starship.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
 
 
 @NgModule({
@@ -26,7 +31,12 @@ import { FilmComponent } from './film/film.component';
     VehiclesComponent,
     SpeciesComponent,
     PlanetsComponent,
-    FilmComponent
+    FilmComponent,
+    PersonComponent,
+    PlanetComponent,
+    SpecieComponent,
+    StarshipComponent,
+    VehicleComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,7 @@ export class SpeciesComponent implements OnInit {
 
   ngOnInit() {
     this.data.getSpecies().subscribe(data => {
-      this.species = data.results;
+      this.species = this.data.appendIds(data.results);
     })
   }
 
