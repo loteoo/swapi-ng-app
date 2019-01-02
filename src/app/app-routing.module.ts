@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PeopleComponent } from './people/people.component';
 import { FilmsComponent } from './films/films.component';
+import { FilmComponent } from './film/film.component';
 import { StarshipsComponent } from './starships/starships.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { SpeciesComponent } from './species/species.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'people', component: PeopleComponent },
   { path: 'films', component: FilmsComponent },
+  { path: 'films/:id', component: FilmComponent },
   { path: 'starships', component: StarshipsComponent },
   { path: 'vehicles', component: VehiclesComponent },
   { path: 'species', component: SpeciesComponent },
