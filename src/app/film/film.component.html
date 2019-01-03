@@ -1,6 +1,7 @@
 <div *ngIf="film">
   <h2>{{film.title}}</h2>
-  <div class="ui segment">
+  <div class="ui segment segment min-height">
+    <h4>Opening crawl:</h4>
     <p>{{film.opening_crawl}}</p>
     <table class="ui celled striped table">
         <thead>
@@ -10,36 +11,30 @@
         </thead>
         <tbody>
           <tr>
-            <td class="collapsing">
-              <i class="folder icon"></i> node_modules
-            </td>
-            <td>Initial commit</td>
+            <td class="collapsing">episode_id</td>
+            <td>{{film.episode_id}}</td>
           </tr>
           <tr>
-            <td>
-              <i class="folder icon"></i> test
-            </td>
-            <td>Initial commit</td>
+            <td class="collapsing">director</td>
+            <td>{{film.director}}</td>
           </tr>
           <tr>
-            <td>
-              <i class="folder icon"></i> build
-            </td>
-            <td>Initial commit</td>
+            <td class="collapsing">producer</td>
+            <td>{{film.producer}}</td>
           </tr>
           <tr>
-            <td>
-              <i class="file outline icon"></i> package.json
-            </td>
-            <td>Initial commit</td>
-          </tr>
-          <tr>
-            <td>
-              <i class="file outline icon"></i> Gruntfile.js
-            </td>
-            <td>Initial commit</td>
+            <td class="collapsing">release_date</td>
+            <td>{{film.release_date}}</td>
           </tr>
         </tbody>
       </table>
+  </div>
+</div>
+<div *ngIf="!film">
+  <h2>Loading...</h2>
+  <div class="ui segment min-height">
+    <div class="ui active inverted dimmer">
+      <div class="ui text loader">Loading</div>
+    </div>
   </div>
 </div>

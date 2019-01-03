@@ -1,3 +1,59 @@
 <div *ngIf="vehicle">
-  <h4>{{vehicle.name}}</h4>
+  <h2>{{vehicle.name}}</h2>
+  <div class="ui segment segment min-height">
+    <h4>{{vehicle.vehicle_class}}</h4>
+    <table class="ui celled striped table">
+        <thead>
+          <tr>
+            <th colspan="2">Meta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="collapsing">model</td>
+            <td>{{vehicle.model}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">manufacturer</td>
+            <td>{{vehicle.manufacturer}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">cost_in_credits</td>
+            <td>{{vehicle.cost_in_credits}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">length</td>
+            <td>{{vehicle.length}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">max_atmosphering_speed</td>
+            <td>{{vehicle.max_atmosphering_speed}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">crew</td>
+            <td>{{vehicle.crew}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">passengers</td>
+            <td>{{vehicle.passengers}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">cargo_capacity</td>
+            <td>{{vehicle.cargo_capacity}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">consumables</td>
+            <td>{{vehicle.consumables}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+<div *ngIf="!vehicle">
+  <h2>Loading...</h2>
+  <div class="ui segment min-height">
+    <div class="ui active inverted dimmer">
+      <div class="ui text loader">Loading</div>
+    </div>
+  </div>
 </div>

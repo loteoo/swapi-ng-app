@@ -19,7 +19,7 @@ export class SpecieComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.data.getPerson(this.specieId).subscribe(data => {
+    this.data.getSpecie(this.specieId).subscribe(data => {
       this.specie = data;
     })
   }

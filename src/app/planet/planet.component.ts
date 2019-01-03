@@ -19,7 +19,7 @@ export class PlanetComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.data.getPerson(this.planetId).subscribe(data => {
+    this.data.getPlanet(this.planetId).subscribe(data => {
       this.planet = data;
     })
   }

@@ -1,3 +1,54 @@
 <div *ngIf="planet">
-  <h4>{{planet.name}}</h4>
+  <h2>{{planet.name}}</h2>
+  <div class="ui segment segment min-height">
+    <table class="ui celled striped table">
+        <thead>
+          <tr>
+            <th colspan="2">Meta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="collapsing">rotation_period</td>
+            <td>{{planet.rotation_period}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">orbital_period</td>
+            <td>{{planet.orbital_period}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">diameter</td>
+            <td>{{planet.diameter}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">climate</td>
+            <td>{{planet.climate}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">gravity</td>
+            <td>{{planet.gravity}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">terrain</td>
+            <td>{{planet.terrain}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">surface_water</td>
+            <td>{{planet.surface_water}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">population</td>
+            <td>{{planet.population}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+<div *ngIf="!planet">
+  <h2>Loading...</h2>
+  <div class="ui segment min-height">
+    <div class="ui active inverted dimmer">
+      <div class="ui text loader">Loading</div>
+    </div>
+  </div>
 </div>

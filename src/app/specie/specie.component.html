@@ -1,3 +1,47 @@
 <div *ngIf="specie">
-  <h4>{{specie.name}}</h4>
+  <h2>{{specie.name}}</h2>
+  <div class="ui segment segment min-height">
+    <h4>{{specie.classification}}</h4>
+    <table class="ui celled striped table">
+        <thead>
+          <tr>
+            <th colspan="2">Meta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="collapsing">designation</td>
+            <td>{{specie.designation}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">average_height</td>
+            <td>{{specie.average_height}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">skin_colors</td>
+            <td>{{specie.skin_colors}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">hair_colors</td>
+            <td>{{specie.hair_colors}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">average_lifespan</td>
+            <td>{{specie.average_lifespan}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">language</td>
+            <td>{{specie.language}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+<div *ngIf="!specie">
+  <h2>Loading...</h2>
+  <div class="ui segment min-height">
+    <div class="ui active inverted dimmer">
+      <div class="ui text loader">Loading</div>
+    </div>
+  </div>
 </div>

@@ -19,7 +19,7 @@ export class VehicleComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.data.getPerson(this.vehicleId).subscribe(data => {
+    this.data.getVehicle(this.vehicleId).subscribe(data => {
       this.vehicle = data;
     })
   }

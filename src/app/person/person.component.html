@@ -1,3 +1,50 @@
 <div *ngIf="person">
-  <h4>{{person.name}}</h4>
+  <h2>{{person.name}}</h2>
+  <div class="ui segment segment min-height">
+    <table class="ui celled striped table">
+        <thead>
+          <tr>
+            <th colspan="2">Meta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="collapsing">height</td>
+            <td>{{person.height}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">mass</td>
+            <td>{{person.mass}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">hair_color</td>
+            <td>{{person.hair_color}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">skin_color</td>
+            <td>{{person.skin_color}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">eye_color</td>
+            <td>{{person.eye_color}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">birth_year</td>
+            <td>{{person.birth_year}}</td>
+          </tr>
+          <tr>
+            <td class="collapsing">gender</td>
+            <td>{{person.gender}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+<div *ngIf="!person">
+  <h2>Loading...</h2>
+  <div class="ui segment min-height">
+    <div class="ui active inverted dimmer">
+      <div class="ui text loader">Loading</div>
+    </div>
+  </div>
 </div>
