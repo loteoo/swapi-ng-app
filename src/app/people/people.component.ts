@@ -8,7 +8,7 @@ import { DataService } from '../data.service';
   styleUrls: ['./people.component.css']
 })
 export class PeopleComponent implements OnInit {
-  people: Array;
+  people: Array<Object>;
 
   constructor(private data: DataService) { }
 

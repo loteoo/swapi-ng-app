@@ -8,7 +8,7 @@ import { DataService } from '../data.service';
 })
 export class VehiclesComponent implements OnInit {
 
-  vehicles: Array;
+  vehicles: Array<Object>;
 
   constructor(private data: DataService) { }
 

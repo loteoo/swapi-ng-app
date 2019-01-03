@@ -1,4 +1,45 @@
 <div *ngIf="film">
   <h2>{{film.title}}</h2>
-  <p>{{film.opening_crawl}}</p>
+  <div class="ui segment">
+    <p>{{film.opening_crawl}}</p>
+    <table class="ui celled striped table">
+        <thead>
+          <tr>
+            <th colspan="2">Meta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="collapsing">
+              <i class="folder icon"></i> node_modules
+            </td>
+            <td>Initial commit</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="folder icon"></i> test
+            </td>
+            <td>Initial commit</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="folder icon"></i> build
+            </td>
+            <td>Initial commit</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="file outline icon"></i> package.json
+            </td>
+            <td>Initial commit</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="file outline icon"></i> Gruntfile.js
+            </td>
+            <td>Initial commit</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
 </div>

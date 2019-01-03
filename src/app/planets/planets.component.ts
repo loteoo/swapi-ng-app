@@ -8,7 +8,7 @@ import { DataService } from '../data.service';
 })
 export class PlanetsComponent implements OnInit {
 
-  planets: Array;
+  planets: Array<Object>;
 
   constructor(private data: DataService) { }
 

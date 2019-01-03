@@ -8,7 +8,7 @@ import { DataService } from '../data.service';
 })
 export class SpeciesComponent implements OnInit {
 
-  species: Array;
+  species: Array<Object>;
 
   constructor(private data: DataService) { }
 
