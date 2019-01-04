@@ -1,4 +1,6 @@
-# SwapiNgApp
+# Star Wars angular App
+
+https://loteoo.github.io/swapi-ng-app/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
