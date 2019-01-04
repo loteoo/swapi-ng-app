@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { SwapiCollection } from '../swapi-collection';
 
 @Component({
   selector: 'app-vehicles',
@@ -13,7 +14,7 @@ export class VehiclesComponent implements OnInit {
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    this.data.getVehicles().subscribe(data => {
+    this.data.getVehicles().subscribe((data: SwapiCollection) => {
       this.vehicles = this.data.appendIds(data.results);
     })
   }

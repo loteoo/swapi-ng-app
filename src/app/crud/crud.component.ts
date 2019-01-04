@@ -2,6 +2,13 @@ import { Component, OnInit } from '@angular/core';
 
 import nanoid from 'nanoid'
 
+interface TodoItem {
+  id: String,
+  value: String,
+  done: Boolean,
+  editing: Boolean
+}
+
 @Component({
   selector: 'app-crud',
   templateUrl: './crud.component.html',
@@ -34,11 +41,11 @@ export class CrudComponent implements OnInit {
   }
 
   remove(id) {
-    this.items = this.items.filter(item => id !== item.id)
+    this.items = this.items.filter((item: TodoItem) => id !== item.id)
   }
 
   enableEdit(id) {
-    this.items = this.items.map(item => 
+    this.items = this.items.map((item: TodoItem) => 
       id === item.id 
         ? ({...item, editing: !item.editing})
         : ({...item, editing: false})
@@ -46,7 +53,7 @@ export class CrudComponent implements OnInit {
   }
 
   setItem(ev) {
-    this.items = this.items.map(item => 
+    this.items = this.items.map((item: TodoItem) => 
       ev.target.id === item.id 
         ? ({...item, value: ev.target.value})
         : item

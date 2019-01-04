@@ -12,7 +12,7 @@ export class DataService {
     return url.replace('https://swapi.co/api/', '').split('/')[1];
   }
 
-  appendIds(collection: Array) {
+  appendIds(collection: Array<any>) {
     
     // Append ID into object 
     for (let i = 0; i < collection.length; i++) {
