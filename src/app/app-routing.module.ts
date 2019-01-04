@@ -14,6 +14,7 @@ import { SpecieComponent } from './specie/specie.component';
 import { PlanetsComponent } from './planets/planets.component';
 import { PlanetComponent } from './planet/planet.component';
 import { CounterComponent } from './counter/counter.component';
+import { CrudComponent } from './crud/crud.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'planets', component: PlanetsComponent },
   { path: 'planets/:id', component: PlanetComponent },
   { path: 'counter', component: CounterComponent },
+  { path: 'crud', component: CrudComponent },
 ];
 
 @NgModule({

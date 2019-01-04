@@ -20,6 +20,7 @@ import { SpecieComponent } from './specie/specie.component';
 import { StarshipComponent } from './starship/starship.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { CounterComponent } from './counter/counter.component';
+import { CrudComponent } from './crud/crud.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { CounterComponent } from './counter/counter.component';
     SpecieComponent,
     StarshipComponent,
     VehicleComponent,
-    CounterComponent
+    CounterComponent,
+    CrudComponent
   ],
   imports: [
     BrowserModule,

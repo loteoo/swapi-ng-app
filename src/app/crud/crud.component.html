@@ -1,0 +1,48 @@
+<h2>To-do list</h2>
+<div class="ui segment">
+  <h4>Items:</h4>
+  <table class="ui celled table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Value</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="items.length > 0">
+      <tr *ngFor="let item of items; index as i;">
+        <td class="collapsing">{{i + 1}}</td>
+        <td>
+          <span *ngIf="!item.editing">{{item.value}}</span>
+          <div class="ui input" *ngIf="item.editing">
+            <input
+              type="text"
+              placeholder="Type something..."
+              value="{{item.value}}"
+              (change)="setItem($event)"
+              id="{{item.id}}"
+            >
+          </div>
+        </td>
+        <td class="right aligned collapsing">
+          <button class="ui button" (click)="enableEdit(item.id)">{{item.editing ? 'Save' : 'Edit'}}</button>
+          <button class="ui button" (click)="remove(item.id)">Remove</button>
+        </td>
+      </tr>
+    </tbody>
+    <tbody *ngIf="items.length === 0">
+      <tr>
+        <td colspan="3" class="center aligned">No items</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th colspan="3">Total: {{items.length}}</th>
+      </tr>
+    </tfoot>
+  </table>
+  <div class="ui action input">
+    <input type="text" placeholder="Type something..." value="{{inputVal}}" (change)="setInputVal($event)">
+    <button class="ui button" (click)="add()">Add item</button>
+  </div>
+</div>
