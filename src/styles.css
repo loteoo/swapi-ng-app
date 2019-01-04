@@ -3,3 +3,7 @@
 .min-height {
   min-height: 25em;
 }
+
+.txt-center {
+  text-align: center !important;
+}

@@ -13,6 +13,7 @@ import { SpeciesComponent } from './species/species.component';
 import { SpecieComponent } from './specie/specie.component';
 import { PlanetsComponent } from './planets/planets.component';
 import { PlanetComponent } from './planet/planet.component';
+import { CounterComponent } from './counter/counter.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,7 +28,8 @@ const routes: Routes = [
   { path: 'species', component: SpeciesComponent },
   { path: 'species/:id', component: SpecieComponent },
   { path: 'planets', component: PlanetsComponent },
-  { path: 'planets/:id', component: PlanetComponent }
+  { path: 'planets/:id', component: PlanetComponent },
+  { path: 'counter', component: CounterComponent },
 ];
 
 @NgModule({
