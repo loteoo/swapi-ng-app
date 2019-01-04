@@ -9,7 +9,7 @@ import { SwapiCollection } from '../swapi-collection';
   styleUrls: ['./people.component.css']
 })
 export class PeopleComponent implements OnInit {
-  people: Array<Object>;
+  people: Array<Object> = [];
 
   constructor(private data: DataService) { }
 

@@ -1,5 +1,5 @@
 <h2>Films</h2>
-<div class="ui grid">
+<div *ngIf="films.length > 0" class="ui grid">
   <div class="eight wide column" *ngFor="let film of films">
     <a routerLink="/films/{{film.id}}" class="ui card">
       <div class="content">
@@ -12,5 +12,10 @@
         </div>
       </div>
     </a>
+  </div>
+</div>
+<div *ngIf="films.length === 0" class="ui segment min-height">
+  <div class="ui active inverted dimmer">
+    <div class="ui text loader">Loading</div>
   </div>
 </div>

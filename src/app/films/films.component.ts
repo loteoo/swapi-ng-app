@@ -9,7 +9,7 @@ import { SwapiCollection } from '../swapi-collection';
 })
 export class FilmsComponent implements OnInit {
 
-  films: Array<Object>;
+  films: Array<Object> = [];
 
   constructor(private data: DataService) { }
 

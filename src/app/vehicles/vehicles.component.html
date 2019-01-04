@@ -1,5 +1,5 @@
 <h2>Vehicles</h2>
-<div class="ui grid">
+<div *ngIf="vehicles.length > 0" class="ui grid">
   <div class="eight wide column" *ngFor="let vehicle of vehicles">
     <a routerLink="/vehicles/{{vehicle.id}}" class="ui card">
       <div class="content">
@@ -15,5 +15,10 @@
         <div>Built by {{vehicle.manufacturer}}</div>
       </div>
     </a>
+  </div>
+</div>
+<div *ngIf="vehicles.length === 0" class="ui segment min-height">
+  <div class="ui active inverted dimmer">
+    <div class="ui text loader">Loading</div>
   </div>
 </div>

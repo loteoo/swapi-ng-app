@@ -9,7 +9,7 @@ import { SwapiCollection } from '../swapi-collection';
 })
 export class PlanetsComponent implements OnInit {
 
-  planets: Array<Object>;
+  planets: Array<Object> = [];
 
   constructor(private data: DataService) { }
 

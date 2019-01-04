@@ -1,5 +1,5 @@
 <h2>Planets</h2>
-<div class="ui grid">
+<div *ngIf="planets.length > 0" class="ui grid">
   <div class="eight wide column" *ngFor="let planet of planets">
     <a routerLink="/planets/{{planet.id}}" class="ui card">
       <div class="content">
@@ -9,5 +9,10 @@
         </div>
       </div>
     </a>
+  </div>
+</div>
+<div *ngIf="planets.length === 0" class="ui segment min-height">
+  <div class="ui active inverted dimmer">
+    <div class="ui text loader">Loading</div>
   </div>
 </div>
